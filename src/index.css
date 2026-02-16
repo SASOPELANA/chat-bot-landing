@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+/* Flowbite theme */
+@import 'flowbite/src/themes/default';
+
+/* Flowbite plugin */
+@plugin "flowbite/plugin";
+
+/* Flowbite source (para purge) */
+@source "../node_modules/flowbite";
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
+}
+
+@theme {
+  --font-Montserrat: Montserrat;
+}
