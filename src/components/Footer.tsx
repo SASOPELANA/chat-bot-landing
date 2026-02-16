@@ -1,7 +1,5 @@
-import React from 'react';
-
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-neutral-primary-soft rounded-base shadow-xs border border-default m-4">
@@ -45,7 +43,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-default sm:mx-auto lg:my-8" />
         <span className="block text-sm text-body sm:text-center">
-          © {currentYear}{' '}
+          © {year}{' '}
           <a href="https://flowbite.com/" className="hover:underline">
             Flowbite™
           </a>
