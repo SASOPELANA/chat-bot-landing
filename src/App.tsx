@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/home';
-import NotFound from './pages/notFount';
 import FlowbiteSetup from './components/FlowbiteSetup'; // Importar FlowbiteSetup
+import Layout from './components/Layout';
+import Home from './pages/home.page';
+import NotFound from './pages/notFount.page';
+import ServicePage from './pages/service.page';
+import Contact from './pages/contact.page';
+import About from './pages/about.page';
 
 function App() {
   return (
@@ -11,8 +14,9 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<h1>About Page</h1>} />
-          <Route path="/contact" element={<h1>Contact Page</h1>} />
+          <Route path="/service" element={<ServicePage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Route>
 
         {/* Ruta para manejar páginas no encontradas (404) */}

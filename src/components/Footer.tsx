@@ -16,31 +16,36 @@ const Footer = () => {
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-body sm:mb-0">
             <li>
+              <Link to="/about" className="hover:underline me-4 md:me-6">
+                Nosotros
+              </Link>
+            </li>
+            <li>
               <a href="#" className="hover:underline me-4 md:me-6">
-                About
+                Politica de Privacidad
               </a>
             </li>
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">
-                Privacy Policy
+                Licencia
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact
-              </a>
+              <Link to="/contact" className="hover:underline">
+                Contacto
+              </Link>
             </li>
           </ul>
         </div>
         <hr className="my-6 border-default sm:mx-auto lg:my-8" />
         <span className="block text-sm text-body sm:text-center">
           © {year}{' '}
-          <a href="https://flowbite.com/" className="hover:underline">
+          <a
+            href="https://github.com/SASOPELANA/chat-bot-landing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             Chat Bot IA
           </a>
           . Todos los Derechos Reservados.
