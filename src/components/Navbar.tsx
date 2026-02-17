@@ -1,22 +1,37 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoChat from '../assets/icons/robot-de-chat.png';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="bg-neutral-secondary-soft fixed w-full z-20 top-0 start-0 border-b border-default">
+    <nav className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link
+          to="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+          onClick={closeMenu}
+        >
           <img src={LogoChat} className="h-7" alt="Chat bot Logo" />
-          <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
+          <span className="self-center text-xl text-gray-900 font-semibold whitespace-nowrap">
             Chat Bot IA
           </span>
         </Link>
         <button
-          data-collapse-toggle="navbar-hamburger"
+          onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base hover:bg-neutral-tertiary hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
           aria-controls="navbar-hamburger"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -36,12 +51,16 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <div className="hidden w-full" id="navbar-hamburger">
-          <ul className="flex flex-col font-medium mt-4 pt-4 bg-neutral-secondary-soft space-y-2 border-t border-default">
+        <div
+          className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}
+          id="navbar-hamburger"
+        >
+          <ul className="flex flex-col font-medium mt-4 pt-4 bg-white space-y-2 border-t border-gray-200 md:space-y-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent md:pt-0">
             <li>
               <Link
                 to="/"
-                className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                onClick={closeMenu}
+                className="block py-2 px-3 text-gray-900 font-semibold rounded md:bg-transparent hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0"
                 aria-current="page"
               >
                 Chat Bot
@@ -50,7 +69,8 @@ const Navbar = () => {
             <li>
               <Link
                 to="/service"
-                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                onClick={closeMenu}
+                className="block py-2 px-3 text-gray-900 font-semibold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:bg-transparent"
               >
                 Servicio
               </Link>
@@ -58,7 +78,8 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                onClick={closeMenu}
+                className="block py-2 px-3 text-gray-900 font-semibold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:bg-transparent"
               >
                 Contacto
               </Link>
@@ -68,7 +89,8 @@ const Navbar = () => {
                 href="https://github.com/SASOPELANA/chat-bot-landing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                onClick={closeMenu}
+                className="block py-2 px-3 text-gray-900 font-semibold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:bg-transparent"
               >
                 GitHub
               </a>

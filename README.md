@@ -22,6 +22,7 @@ pantalla.
 - Axios
 - React Router DOM
 - React Helmet
+- React Icons
 - Node.js
 - npm o pnpm
 

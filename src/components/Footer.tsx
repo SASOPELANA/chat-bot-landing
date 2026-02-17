@@ -37,14 +37,14 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-default sm:mx-auto lg:my-8" />
+        <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
         <span className="block text-sm text-body sm:text-center">
           © {year}{' '}
           <a
             href="https://github.com/SASOPELANA/chat-bot-landing"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline "
           >
             Chat Bot IA
           </a>
