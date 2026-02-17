@@ -1,17 +1,16 @@
+import { Link } from 'react-router-dom';
+import LogoChat from '../assets/icons/robot-de-chat.png';
+
 const Navbar = () => {
   return (
     <nav className="bg-neutral-secondary-soft fixed w-full z-20 top-0 start-0 border-b border-default">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-7"
-            alt="Flowbite Logo"
-          />
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={LogoChat} className="h-7" alt="Flowbite Logo" />
           <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
-            Flowbite
+            Chat Bot IA
           </span>
-        </a>
+        </Link>
         <button
           data-collapse-toggle="navbar-hamburger"
           type="button"
@@ -40,36 +39,38 @@ const Navbar = () => {
         <div className="hidden w-full" id="navbar-hamburger">
           <ul className="flex flex-col font-medium mt-4 pt-4 bg-neutral-secondary-soft space-y-2 border-t border-default">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                 aria-current="page"
               >
-                Home
-              </a>
+                Chat Bot
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/service"
+                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+              >
+                Servicio
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+              >
+                Contacto
+              </Link>
             </li>
             <li>
               <a
-                href="#"
+                href="https://github.com/SASOPELANA/chat-bot-landing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
               >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
-              >
-                Contact
+                GitHub
               </a>
             </li>
           </ul>
