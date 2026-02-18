@@ -81,7 +81,8 @@ const Form = () => {
         </div>
 
         {/* Configuración de FormSubmit al final como en el ejemplo */}
-        <input type="hidden" name="_next" value="http://localhost:5173" />
+        {/* En Desarrllo usar localthost */}
+        <input type="hidden" name="_next" value="https://chat-bot-landing.vercel.app/" />
         <input type="hidden" name="_captcha" value="false" />
       </form>
     </div>
