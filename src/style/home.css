@@ -1,0 +1,117 @@
+@layer components {
+  /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
+}
+
+.chatbot .chatbox {
+  overflow-y: auto;
+  height: 700px;
+  padding: 15px 20px 70px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+  width: 6px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 25px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+.chatbox .chat p {
+  white-space: pre-wrap;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  max-width: 75%;
+  color: #fff;
+  font-size: 0.95rem;
+  background: #7591b9;
+  transition: all 0.3s ease;
+}
+.chatbox .incoming p {
+  border-radius: 10px 10px 10px 0;
+}
+.chatbox .chat p.error {
+  color: #721c24;
+  background: #f8d7da;
+}
+.chatbox .incoming p {
+  color: #000;
+  background: #f2f2f2;
+}
+.chatbot .chat-input {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 3px 15px;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 12px 12px;
+}
+.chat-input textarea {
+  height: 55px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  max-height: 180px;
+  padding: 15px 15px 15px 0;
+  font-size: 0.95rem;
+}
+.chat-input span {
+  align-self: flex-end;
+  color: #575850;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  visibility: visible;
+  font-size: 1.35rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.chat-input span:hover {
+  transform: scale(1.1);
+  color: #5e5e5f;
+}
+
+@media (max-width: 640px) {
+  .chatbot {
+    padding-top: 85px; /* Compensación para el Navbar fijo */
+    padding-bottom: 25px;
+    padding-inline: 12px;
+    align-items: center;
+  }
+  .chatbot > div {
+    width: 100%;
+    height: auto;
+  }
+  .chatbot .w-full {
+    margin: 0;
+    width: 100%;
+    height: auto !important;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .chatbot header {
+    border-radius: 12px 12px 0 0;
+    padding: 12px 15px;
+  }
+  .chatbot .chatbox {
+    height: 480px; /* Altura controlada para que no se desborde */
+    max-height: 60vh;
+    padding: 15px 15px 20px;
+  }
+  .chatbot .chat-input {
+    border-radius: 0 0 12px 12px;
+    padding: 8px 15px;
+    position: relative; /* Cambiado de sticky/fixed para que fluya con el card */
+    bottom: auto;
+  }
+}

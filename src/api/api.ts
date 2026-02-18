@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-//
 const api = axios.create({
-  //
-  baseURL: process.env.REACT_APP_API_GROQ_IA,
+  baseURL: import.meta.env.VITE_API_GROQ_IA,
   headers: {
     'Content-Type': 'application/json',
   },
