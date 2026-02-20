@@ -6,15 +6,19 @@ Interfaz moderna de landing page + chatbot IA con soporte para múltiples canale
 
 ## Descripción
 
-Este proyecto es una **landing page completa + interfaz de chatbot** que se integra con una API REST (Groq IA) para responder preguntas en tiempo real. Incluye:
+Este proyecto es una **landing page completa + interfaz de chatbot** que se integra con una mi propia API REST (Groq IA) para responder preguntas en tiempo real. Incluye:
 
 - Chatbot interactivo con historial persistente
 - Múltiples páginas (Home, Servicios, Sobre, Contacto)
 - Diseño fully responsive
 - UI moderna con Tailwind CSS + Flowbite
 - Performance optimizado con Vite
-- Integración con API REST (Groq IA)
+- Integración con API REST (Mi API REST)
 - Formulario de contacto con validación
+
+## Repositorio de la API REST - NODE - TS - GROQ
+
+<https://github.com/SASOPELANA/api-rest-groq-ts>
 
 ## Requisitos Previos
 
@@ -120,6 +124,7 @@ src/
 | React Helmet | 2.0 | Meta tags dinámicos |
 | React Icons | 5.5 | Iconografía |
 | Vite | 7.3 | Build tool |
+| Deep Chat React | 1.13 | Chatbot |
 
 ## Características Principales
 
